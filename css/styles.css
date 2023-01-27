@@ -4,15 +4,6 @@
     background-image: url("/gamble/img/gamble_jumbotron.jpg");
     background-size: cover;
     background-position: center;
-    padding-top: 130px;
-    padding-bottom: 130px;
-}
-
-@media (max-width: 991px) {
-    .jumbotron-gamble {
-        padding-top: 45px;
-        padding-bottom: 45px;
-    }
 }
 
 /* Navbar */
