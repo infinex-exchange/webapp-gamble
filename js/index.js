@@ -10,9 +10,6 @@ function renderGame(data) {
                         <div class="col-12">
                             <h5 class="card-title">${data.name}</h5>
                         </div>
-                        <div class="col-12 pt-2 small secondary">
-                            <span>${data.description}</span>
-                        </div>
                     </div>
                 </div>
             </div>
