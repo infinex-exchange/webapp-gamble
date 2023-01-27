@@ -11,7 +11,7 @@ function renderGame(data) {
                             <h5 class="card-title">${data.name}</h5>
                         </div>
                         <div class="col-12 pt-2 small secondary">
-                            <span>${game.description}</span>
+                            <span>${data.description}</span>
                         </div>
                     </div>
                 </div>
