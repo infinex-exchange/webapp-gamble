@@ -8,7 +8,7 @@ function renderGame(data) {
                 <div class="card-body">
                     <div class="row">
                         <div class="col-12">
-                            <h5 class="card-title">${game.name}</h5>
+                            <h5 class="card-title">${data.name}</h5>
                         </div>
                         <div class="col-12 pt-2 small secondary">
                             <span>${game.description}</span>
