@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <?php include('../../templates/head.php'); ?>
+        <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/gamble/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Infinex Gamble</title>
     </head>
@@ -30,38 +31,10 @@
         	        <div class="p-2 p-lg-4 background rounded">
         	            <div class="row">
         	                <div class="col-12 pt-2 pb-4 text-center">
-                                <h3>Ending soon</h3>
+                                <h3>Games list</h3>
         		            </div>
         		            <div class="col-12">
-                                <div id="last-minute-data" class="row">
-                                </div>
-        		            </div>
-        	            </div>
-        	        </div>
-        	    </div>
-                
-                <div class="col-12">
-        	        <div class="p-2 p-lg-4 background rounded">
-        	            <div class="row">
-        	                <div class="col-12 pt-2 pb-4 text-center">
-                                <h3>Popular NFTs</h3>
-        		            </div>
-        		            <div class="col-12">
-                                <div id="featured-nft-data" class="row">
-                                </div>
-        		            </div>
-        	            </div>
-        	        </div>
-        	    </div>
-                
-                <div class="col-12">
-        	        <div class="p-2 p-lg-4 background rounded">
-        	            <div class="row">
-        	                <div class="col-12 pt-2 pb-4 text-center">
-                                <h3>Low price</h3>
-        		            </div>
-        		            <div class="col-12">
-                                <div id="low-price-data" class="row">
+                                <div id="games-data" class="row">
                                 </div>
         		            </div>
         	            </div>
