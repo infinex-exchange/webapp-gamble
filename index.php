@@ -20,7 +20,7 @@
             <div class="jumbotron-gamble row m-0 px-4">
                 <div class="col-12">
                     <h1>Infinex Gamble</h1>
-                    <strong>Popular casino games available in all cryptocurrencies supported by the exchange</strong>
+                    <strong>Popular casino games available in all cryptocurrencies supported by exchange</strong>
                 </div>
             </div>
             
