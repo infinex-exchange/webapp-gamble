@@ -73,4 +73,6 @@ $(document).ready(function() {
         true,
         true
     );
+
+    initSelectCoin();
 });
