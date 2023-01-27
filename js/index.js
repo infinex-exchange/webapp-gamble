@@ -1,6 +1,6 @@
 function renderGame(data) {     
     return `
-        <div class="game-item col-12 col-md-3 col-lg-3 py-2" data-gameid="${data.gameid}" onClick="gotoGame(${data.gameid})">
+        <div class="game-item col-6 col-md-4 col-lg-2 py-2" data-gameid="${data.gameid}" onClick="gotoGame(${data.gameid})">
             <div class="card h-100 hoverable">
                 <a href="#_" class="d-flex h-100" onClick="gotoGame(${data.gameid})">
                     <img src="${data.cover}" class="card-img-top my-auto">
