@@ -45,6 +45,44 @@
         
         <!-- / Root container -->
         </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-start-game">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="ps-1 modal-title msg-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="modal-body">
+                    
+                        <div class="row">
+                            <div class="col-12 pt-3">
+                                <h5>Coin:</h5>
+                            </div>
+                            <div class="col-12 pt-1">
+                                <?php include(__DIR__.'/../../templates/select_coin.php'); ?>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 pt-3">
+                                <h5>Multiplier:</h5>
+                            </div>
+                            <div class="col-12 pt-1">
+                                <?php include(__DIR__.'/templates/select_multiplier.php'); ?>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <a href="#_" id="mt-submit" class="btn btn-primary">Start game</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <?php include('../../templates/modals.php'); ?>
         <script src="/gamble/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
