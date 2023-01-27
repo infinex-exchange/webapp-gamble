@@ -17,7 +17,7 @@
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 h-rest pt-2 p-0">
         
-            <div class="jumbotron-gamble row m-0 px-4 py-3 py-lg-5">
+            <div class="jumbotron-gamble row m-0 px-4">
                 <div class="col-12">
                     <h1>Infinex Gamble</h1>
                     <strong>Popular casino games available in all cryptocurrencies supported by the exchange</strong>
