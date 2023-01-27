@@ -41,7 +41,7 @@ $(document).ready(function() {
             .retry(config.retry)
             .done(function (data) {
                 if(data.success) {
-                    $.each(data.offers, function(k, v) {
+                    $.each(data.games, function(k, v) {
                         thisAS.append(renderGame(v));
                     });
                     
@@ -50,7 +50,7 @@ $(document).ready(function() {
                     if(thisAS.offset == 0)
                         $(document).trigger('renderingStage');
                         
-                    if(data.offers.length != 50)
+                    if(data.games.length != 50)
                         thisAS.noMoreData();
                 } else {
                     msgBoxRedirect(data.error);
