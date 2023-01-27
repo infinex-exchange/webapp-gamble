@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <?php include('../../templates/head.php'); ?>
-        <link rel="stylesheet" href="/nft/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title>Infinex NFT</title>
+        <link rel="stylesheet" href="/gamble/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
+        <title>Infinex Gamble</title>
     </head>
     <body class="body-background">
     
@@ -17,9 +17,9 @@
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 h-rest pt-2 p-0">
         
-            <div class="jumbotron-nft row m-0 px-4 py-3 py-lg-5">
+            <div class="jumbotron-gamble row m-0 px-4 py-3 py-lg-5">
                 <div class="col-12">
-                    <h1>Infinex NFT</h1>
+                    <h1>Infinex Gamble</h1>
                     <strong>Discover exclusive NFT collections from the world's top artists.</strong>
                 </div>
             </div>
@@ -74,7 +74,6 @@
         </div>
         
         <?php include('../../templates/modals.php'); ?>
-        <script src="/nft/js/render_offer.js?<?php echo filemtime(__DIR__.'/js/render_offer.js'); ?>"></script>
         <script src="/nft/js/index.js?<?php echo filemtime(__DIR__.'/js/index.js'); ?>"></script>
         
         <!-- Footer -->

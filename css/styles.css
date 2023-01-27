@@ -1,25 +1,14 @@
-/* Init variables */
-
-:root {
-    --emulated-100vh: 100vh;
-    --height-main-nav: 0px;
-    --height-module-nav: 0px;
-    --height-mobile-nav: 0px;
-    --target-height-offers-data: 0px;
-    --target-height-filter-data: 0px;
-}
-
 /* Jumbotron background */
 
-.jumbotron-nft {
-    background-image: url("/nft/img/nft_jumbotron.jpg");
+.jumbotron-gamble {
+    background-image: url("/gamble/img/gamble_jumbotron.jpg");
     background-size: cover;
     background-position: center;
 }
 
 /* Navbar */
 
-.navbar-nft {
+.navbar-gamble {
     background-color: var(--color-input) !important;
     z-index: 999 !important;
 }
@@ -28,7 +17,7 @@
     display: none !important;
 }
 
-.navbar-nft br {
+.navbar-gamble br {
     display: none !important;
 }
 
@@ -36,36 +25,4 @@
 
 .card {
     background-color: var(--color-bg-light);
-}
-
-/* NFT content link */
-
-.nft-content-link, .nft-content-link:hover {
-    color: var(--color-primary);
-}
-
-/* Js sizing */
-
-.rest-of-height {
-    height: calc(var(--emulated-100vh)
-                 - var(--height-main-nav)
-                 - var(--height-module-nav)
-                );
-}
-
-@media (max-width: 991px) {
-    .rest-of-height {
-        height: calc(var(--emulated-100vh)
-                     - var(--height-main-nav)
-                     - var(--height-mobile-nav)
-                    ) !important;
-    }
-}
-
-#offers-content {
-    height: var(--target-height-offers-data);
-}
-
-#filter-content {
-    height: var(--target-height-filter-data);
 }
