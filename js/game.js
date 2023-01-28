@@ -15,6 +15,8 @@ $(document).on('authChecked', function() {
         return;
     }
     
+    window.gsid = parseInt(window.gsid);
+    
     $.ajax({
         url: config.apiUrl + '/gamble/session/bind',
         type: 'POST',
