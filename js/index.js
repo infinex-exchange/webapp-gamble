@@ -3,7 +3,14 @@ function gotoGame(item) {
         gotoLogin();
         return;
     }
-
+    
+    // Reset
+    window.selectedGameId = $(item).data('gameid');
+    $('#select-coin').val('');
+    $('#select-multiplier').val('')
+                           .data('multiplier', '')
+                           .prop('disabled', true);
+    
     $('.msg-title').html( $(item).data('name') );
     $('#modal-start-game').modal('show');
 }
