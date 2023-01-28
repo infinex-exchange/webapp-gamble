@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-auto my-auto">
                             <span class="secondary">Bet:</span>
-                            <span class="game-bet-max"></span>
+                            <span class="game-bet-min"></span>
                             <span class="game-asset"></span>
                             <span class="secondary">-</span>
                             <span class="game-bet-max"></span>
