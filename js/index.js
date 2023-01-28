@@ -1,15 +1,16 @@
-function gotoGame(gameid) {
+function gotoGame(item) {
     if(!window.loggedIn) {
         gotoLogin();
         return;
     }
 
+    $('#msg-title').html( $(item).data('name') );
     $('#modal-start-game').modal('show');
 }
 
 function renderGame(data) {   
     return `
-        <div class="game-item col-6 col-md-4 col-lg-2 py-2" data-gameid="${data.gameid}" onClick="gotoGame(${data.gameid})">
+        <div class="game-item col-6 col-md-4 col-lg-2 py-2" data-gameid="${data.gameid}" data-name="${data.name}" onClick="gotoGame(this)">
             <div class="card h-100 hoverable">
                 <a href="#_" class="d-flex h-100">
                     <img src="${data.cover}" class="card-img-top my-auto">
