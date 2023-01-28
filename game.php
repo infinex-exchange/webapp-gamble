@@ -26,9 +26,8 @@
             
             <div class="row">
                 <div class="col-12">
-                    <div id="game-container" class="embed-responsive">
-                        <iframe class="embed-responsive-item" id="game-frame" frameborder="0" scrolling="no"
-                         allowfullscreen allowtransparency allow="autoplay"></iframe>
+                    <div id="game-container" class="ratio">
+                        <iframe id="game-frame" frameborder="0" scrolling="no" allowfullscreen allowtransparency allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
