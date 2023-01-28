@@ -4,7 +4,7 @@ function gotoGame(item) {
         return;
     }
 
-    $('#msg-title').html( $(item).data('name') );
+    $('.msg-title').html( $(item).data('name') );
     $('#modal-start-game').modal('show');
 }
 
