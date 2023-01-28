@@ -60,6 +60,8 @@ $(document).on('authChecked', function() {
         if(data.success) {
             window.credit = data.credit;
             
+            document.title = data.name + document.title;
+            
             $('.game-name').html(data.name);
             $('#game-container').addClass('ratio-' + data.aspect);
             $('.game-asset').html(data.assetid);
