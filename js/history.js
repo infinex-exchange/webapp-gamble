@@ -85,7 +85,7 @@ $(document).on('authChecked', function() {
                         if(thisAS.offset == 0)
                             $(document).trigger('renderingStage');
                             
-                        if(data.payouts.length != 50)
+                        if(data.history.length != 50)
                             thisAS.noMoreData();
                     }
                     else {
