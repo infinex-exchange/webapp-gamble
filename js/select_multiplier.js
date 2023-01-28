@@ -38,7 +38,7 @@ function initSelectMultiplier(gameid, assetid) {
         if(data.success) {
             $.each(data.variants, function(k, v) {
                 $('#select-multiplier-data').append(`
-                    <div class="select-multiplier-item row p-1 hoverable" data-gvid="${v.gvid}">
+                    <div class="select-multiplier-item row p-1 hoverable" data-multiplier="${v.multiplier}" data-gvid="${v.gvid}">
                         <div class="col-2 my-auto">
                             <strong>x${v.multiplier}</strong>
                         </div>
