@@ -26,8 +26,8 @@
                 </div>
                 <div class="col-12 col-lg-auto my-auto">
                     <div class="row">
-                        <div class="col-auto rounded secondary my-auto p-2" style="background-color: var(--color-input)">
-                            <h5 class="game-multiplier m-0"></h5>
+                        <div class="col-auto rounded my-auto p-2" style="background-color: var(--color-input)">
+                            <strong class="game-multiplier small secondary"></strong>
                         </div>
                         <div class="col-auto my-auto">
                             <span class="secondary">Bet:</span>
