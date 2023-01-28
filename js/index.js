@@ -42,6 +42,40 @@ $(document).ready(function() {
         initSelectMultiplier(window.selectedGameId, $(this).val());
     });
     
+    $('#msg-submit').click(function() {
+        var assetid = $('#select-coin').val();
+        var multiplier = $('#select-multiplier').data('multiplier');
+        
+        if(assetid == '' || multiplier == '')
+            return;
+        
+        $('#modal-start-game').modal('hide');
+        
+        $.ajax({
+            url: config.apiUrl + '/gamble/session/start',
+            type: 'POST',
+            data: JSON.stringify({
+                api_key: window.apiKey,
+                gameid: window.selectedGameId,
+                assetid: assetid,
+                multiplier: multiplier
+            }),
+            contentType: "application/json",
+            dataType: "json",
+        })
+        .retry(config.retry)
+        .done(function (data) {
+            if(data.success) {
+                alert(data);
+            } else {
+                msgBox(data.error);
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            msgBoxNoConn(false);
+        });
+    });
+    
     window.gamesAS = new AjaxScroll(
         $('#games-data'),
         $('#games-data-preloader'),

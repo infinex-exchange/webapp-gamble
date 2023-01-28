@@ -78,7 +78,7 @@
                     
                     <div class="modal-footer">
                         <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <a href="#_" id="mt-submit" class="btn btn-primary">Start game</a>
+                        <a href="#_" id="msg-submit" class="btn btn-primary">Start game</a>
                     </div>
                 </div>
             </div>
