@@ -8,7 +8,7 @@ function gotoGame(item) {
     window.selectedGameId = $(item).data('gameid');
     $('#select-coin').val('');
     $('#select-multiplier').val('')
-                           .data('multiplier', '')
+                           .data('gvid', '')
                            .prop('disabled', true);
     
     $('.msg-title').html( $(item).data('name') );
@@ -43,10 +43,9 @@ $(document).ready(function() {
     });
     
     $('#msg-submit').click(function() {
-        var assetid = $('#select-coin').val();
-        var multiplier = $('#select-multiplier').data('multiplier');
+        var gvid = $('#select-multiplier').data('gvid');
         
-        if(assetid == '' || multiplier == '')
+        if(gvid == '')
             return;
         
         $('#modal-start-game').modal('hide');
@@ -56,9 +55,7 @@ $(document).ready(function() {
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
-                gameid: window.selectedGameId,
-                assetid: assetid,
-                multiplier: multiplier
+                gvid: gvid
             }),
             contentType: "application/json",
             dataType: "json",
