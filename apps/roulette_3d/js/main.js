@@ -2992,7 +2992,7 @@ function CGame(b) {
         f = !0;
         
         function syncCredit() {
-            var credit = parent.bioSyncCredit();
+            var credit = parseInt(parent.bioSyncCredit());
             r.setCredit(credit);
             z.refreshMoney(credit);
         }

@@ -1811,7 +1811,7 @@ function CGame(a) {
         d = !0;
         
         function syncCredit() {
-            var credit = parent.bioSyncCredit();
+            var credit = parseInt(parent.bioSyncCredit());
             p.setCredit(credit);
             r.setMoney(credit);
         }
