@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-12 col-lg-auto my-auto">
                     <div class="row">
-                        <div class="col-auto my-auto">
+                        <div class="col-auto ui-card-light rounded my-auto">
                             <h5 class="game-multiplier m-0"></h5>
                         </div>
                         <div class="col-auto my-auto">
