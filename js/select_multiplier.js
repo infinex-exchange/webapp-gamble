@@ -39,13 +39,13 @@ function initSelectMultiplier(gameid, assetid) {
             $.each(data.variants, function(k, v) {
                 $('#select-multiplier-data').append(`
                     <div class="select-multiplier-item row p-1 hoverable" data-multiplier="${v.multiplier}">
-                        <div class="col-4 my-auto">
+                        <div class="col-2 my-auto">
                             <strong>x${v.multiplier}</strong>
                         </div>
-                        <div class="col-8">
-                            Min bet: ${v.bet_min}
+                        <div class="col-10">
+                            Min bet: ${v.bet_min} ${assetid}
                             <br>
-                            Max bet: ${v.bet_max}
+                            Max bet: ${v.bet_max} ${assetid}
                         </div>
                     </div>
                 `);
