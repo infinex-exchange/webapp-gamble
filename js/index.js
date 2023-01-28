@@ -55,7 +55,7 @@ $(document).ready(function() {
             type: 'POST',
             data: JSON.stringify({
                 api_key: window.apiKey,
-                gvid: gvid
+                gvid: parseInt(gvid)
             }),
             contentType: "application/json",
             dataType: "json",
