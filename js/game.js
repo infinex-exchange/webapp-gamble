@@ -30,6 +30,7 @@ $(document).on('authChecked', function() {
     .done(function (data) {
         if(data.success) {
             console.log(data);
+            $(document).trigger('renderingStage');
         } else {
             msgBoxRedirect(data.error, true);
         }
