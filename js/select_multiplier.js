@@ -19,6 +19,7 @@ function initSelectMultiplier(gameid, assetid) {
     $('#select-multiplier').val('');
     $('#select-multiplier').data('multiplier', '');
     $('#select-multiplier-data').empty();
+    $('#select-multiplier-data-preloader').show();
     
     var data = {
         gameid: gameid,
@@ -38,8 +39,13 @@ function initSelectMultiplier(gameid, assetid) {
             $.each(data.variants, function(k, v) {
                 $('#select-multiplier-data').append(`
                     <div class="select-multiplier-item row p-1 hoverable" data-multiplier="${v.multiplier}">
-                        <div class="col my-auto">
-                            ${v.multiplier}
+                        <div class="col-4 my-auto">
+                            <strong>x${v.multiplier}</strong>
+                        </div>
+                        <div class="col-8">
+                            Min bet: ${v.bet_min}
+                            <br>
+                            Max bet: ${v.bet_max}
                         </div>
                     </div>
                 `);
@@ -55,6 +61,8 @@ function initSelectMultiplier(gameid, assetid) {
         } else {
             msgBox(data.error);
         }
+        
+        $('#select-multiplier-data-preloader').hide();
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
         msgBoxNoConn(true);
