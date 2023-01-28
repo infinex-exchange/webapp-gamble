@@ -37,6 +37,11 @@ function renderGame(data) {
 $(document).ready(function() {
     window.renderingStagesTarget = 1;
     
+    $('#select-coin').on('change', function() {
+        $('#select-multiplier').prop('disabled', false);
+        initSelectMultiplier(window.selectedGameId, $(this).val());
+    });
+    
     window.gamesAS = new AjaxScroll(
         $('#games-data'),
         $('#games-data-preloader'),
