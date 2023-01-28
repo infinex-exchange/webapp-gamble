@@ -25,7 +25,7 @@
                     <h3 class="game-name m-0"></h3>
                 </div>
                 <div class="col-12 col-lg-auto my-auto">
-                    <div class="row">
+                    <div class="row m-1">
                         <div class="col-auto rounded my-auto px-2 py-1" style="background-color: var(--color-input)">
                             <strong class="game-multiplier small secondary"></strong>
                         </div>
