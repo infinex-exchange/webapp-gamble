@@ -43,9 +43,9 @@ function initSelectMultiplier(gameid, assetid) {
                             <strong>x${v.multiplier}</strong>
                         </div>
                         <div class="col-10">
-                            Min bet: ${v.bet_min} ${assetid}
+                            <span class="secondary">Min bet:</span> ${v.bet_min} ${assetid}
                             <br>
-                            Max bet: ${v.bet_max} ${assetid}
+                            <span class="secondary">Max bet:</span> ${v.bet_max} ${assetid}
                         </div>
                     </div>
                 `);
