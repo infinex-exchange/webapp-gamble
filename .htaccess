@@ -1,3 +1,6 @@
 Options -MultiViews -Indexes
 
 RewriteEngine on
+
+RewriteRule ^game/?$ game.php [L]
+RewriteRule ^history/?$ history.php [L]
