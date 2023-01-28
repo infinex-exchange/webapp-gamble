@@ -2620,6 +2620,7 @@ function CGame(a) {
         bet = new Object();
         
         $(n.getNumbersBetted()).each(function(key, value) {
+            console.log(value);
          bet[key] = value.win;
         });
         
