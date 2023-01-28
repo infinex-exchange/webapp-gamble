@@ -57,7 +57,7 @@
                     <div class="modal-body">
                     
                         <div class="row">
-                            <div class="col-12 pt-3">
+                            <div class="col-12">
                                 <h5>Coin:</h5>
                             </div>
                             <div class="col-12 pt-1">
