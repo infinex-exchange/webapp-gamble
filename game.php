@@ -3,7 +3,7 @@
     <head>
         <?php include('../../templates/head.php'); ?>
         <link rel="stylesheet" href="/gamble/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
-        <title> | Infinex Gamble</title>
+        <title>Infinex Gamble</title>
     </head>
     <body>
     
