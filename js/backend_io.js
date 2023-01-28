@@ -20,7 +20,7 @@ function bioRequest(request, callback) {
         if(data.success) {
             callback(data.response);
         } else {
-            msgBoxRedirect(data.error, true);
+            msgBoxRedirect(data.error);
         }
     })
     .fail(function (jqXHR, textStatus, errorThrown) {
