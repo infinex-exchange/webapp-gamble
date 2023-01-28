@@ -20,7 +20,7 @@
         <!-- Main column -->
         <div class="col-12 p-0 ui-card ui-column">
             
-            <div class="row p-2">
+            <div class="row pb-3">
                 <div class="col-12 col-lg-auto my-auto">
                     <h3 class="game-name m-0"></h3>
                 </div>
