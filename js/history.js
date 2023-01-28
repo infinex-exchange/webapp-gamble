@@ -12,7 +12,7 @@ function renderHistoryItem(data) {
                         <img src="${data.game_cover}" class="img-fluid">
                     </div>
                     <div class="col-9 my-auto">
-                        ${data.game_name}
+                        <strong>${data.game_name}</strong>
                     </div>
                 </div>
             </div>
