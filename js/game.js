@@ -32,7 +32,7 @@ $(document).on('authChecked', function() {
     .done(function (data) {
         if(data.success) {
             $('.game-name').html(data.name);
-            $('#game-iframe').attr('src', '/gamble/apps/' + data.frontend);
+            $('#game-frame').attr('src', '/gamble/apps/' + data.frontend);
             $(document).trigger('renderingStage');
         } else {
             msgBoxRedirect(data.error, true);
