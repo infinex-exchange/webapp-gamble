@@ -2990,35 +2990,15 @@ function CGame(b) {
         c = 0;
         this._onSitDown();
         f = !0;
-        resync = 1;
-        function sessionPing() {
-         $.ajax({
-          type: 'POST',
-          url: IC_WEBGAMES_SERVER + '/session.php',
-          data: {
-           op: 'sync',
-           sid: IC_SID,
-           token: IC_TOKEN ,
-           resync: resync
-          },
-          success: function(data) {
-           if(data.status == 1) {
-            if (typeof data.credit !== 'undefined') {
-             r.setCredit(data.credit);
-             z.refreshMoney(data.credit);
-             resync = 0;
-            }
-           }
-           else {
-            window.top.location.href='/';
-           }
-          },
-          complete: function(data) {
-           setTimeout(sessionPing, 1000);
-          }
-         });
+        
+        function syncCredit() {
+            var credit = parent.bioSyncCredit();
+            r.setCredit(credit);
+             z.refreshMoney(credit);
         }
-        sessionPing();
+        
+        setInterval(syncCredit, 5000);
+        syncCredit();
     };
     this.unload = function() {
         stopSound("wheel_sound");
@@ -3231,27 +3211,15 @@ function CGame(b) {
          bet[key] = value.win;
         });
         
-        $.ajax({
-         url : IC_WEBGAMES_SERVER + '/roulette.php',
-         type : 'POST',
-         data :  {
-          sid: IC_SID,
-          token: IC_TOKEN ,
-          a: JSON.stringify(bet)
-         },   
-         success : function(data) {
-          if(data.status == 1) {
-           k = data.k;
-           0 !== r.getCurBet() && (r.getCurBet() < MIN_BET ? (I.show(TEXT_ERROR_MIN_BET), z.enableBetFiches(), z.enableSpin(!0)) : E.visible || (E.visible = !0, H.hideBall(), F.hide(), N.hide(), z.enableSpin(!1), z.displayAction(TEXT_SPINNING, ""), $(s_oMain).trigger("bet_placed", r.getCurBet()), obj._startRouletteAnim(), obj._startWheelTopAnim(), obj._startBallSpinAnim(), obj._setState(STATE_GAME_SPINNING), playSound("wheel_sound", 1, !1)))
-          }  
-         },
-         error : function(xhr, textStatus, errorThrown ) {
-          var retry = this;
-          setTimeout(function() {
-           $.ajax(retry);
-          }, 1000);
-         }
-        });
+        parent.bioRequest(
+            {
+                a: bet
+            },
+            function(data) {
+                k = data.k;
+                0 !== r.getCurBet() && (r.getCurBet() < MIN_BET ? (I.show(TEXT_ERROR_MIN_BET), z.enableBetFiches(), z.enableSpin(!0)) : E.visible || (E.visible = !0, H.hideBall(), F.hide(), N.hide(), z.enableSpin(!1), z.displayAction(TEXT_SPINNING, ""), $(s_oMain).trigger("bet_placed", r.getCurBet()), obj._startRouletteAnim(), obj._startWheelTopAnim(), obj._startBallSpinAnim(), obj._setState(STATE_GAME_SPINNING), playSound("wheel_sound", 1, !1)))
+            }
+        );
     };
     this.setMoney = function(a) {
         r.setMoney(a);

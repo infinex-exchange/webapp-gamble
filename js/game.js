@@ -16,7 +16,10 @@ function backendPing() {
     })
     .retry(config.retry)
     .done(function (data) {
-        if(!data.success) {
+        if(data.success) {
+            window.credit = data.credit;
+        }
+        else {
             msgBoxRedirect(data.error, true);
         }
     })
@@ -32,6 +35,7 @@ $(document).on('authChecked', function() {
     var urlParams = new URLSearchParams(window.location.search);
     window.gsid = urlParams.get('gsid');
     window.secret = urlParams.get('secret');
+    window.credit = 0;
     
     if(window.gsid == null || window.secret == null) {
         msgBoxRedirect('Session parameters not set');
@@ -54,6 +58,8 @@ $(document).on('authChecked', function() {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
+            window.credit = data.credit;
+            
             $('.game-name').html(data.name);
             $('#game-container').addClass('ratio-' + data.aspect);
             $('#game-frame').attr('src', '/gamble/apps/' + data.frontend + '/');

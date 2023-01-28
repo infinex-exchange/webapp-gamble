@@ -1,4 +1,8 @@
-function backend(request, callback) {
+function bioSyncCredit() {
+    return window.credit;
+}
+
+function bioRequest(request, callback) {
     $.ajax({
         url: config.apiUrl + '/gamble/backend_io',
         type: 'POST',
