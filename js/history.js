@@ -8,10 +8,10 @@ function renderHistoryItem(data) {
             </div>
             <div class="col-3 d-none d-lg-block">
                 <div class="row">
-                    <div class="col-2 my-auto">
+                    <div class="col-3 my-auto">
                         <img src="${data.game_cover}" class="img-fluid">
                     </div>
-                    <div class="col-10 my-auto">
+                    <div class="col-9 my-auto">
                         ${data.game_name}
                     </div>
                 </div>
