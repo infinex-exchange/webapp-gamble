@@ -7,7 +7,14 @@ function renderHistoryItem(data) {
                 ${cTime}
             </div>
             <div class="col-3 d-none d-lg-block">
-                ${data.name}
+                <div class="row">
+                    <div class="col-2 my-auto">
+                        <img src="${data.game_cover}" class="img-fluid">
+                    </div>
+                    <div class="col-10 my-auto">
+                        ${data.game_name}
+                    </div>
+                </div>
             </div>
             <div class="col-2 d-none d-lg-block text-end">
                 ${data.bet} ${data.assetid}
