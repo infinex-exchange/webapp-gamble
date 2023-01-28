@@ -31,7 +31,8 @@ $(document).on('authChecked', function() {
     .retry(config.retry)
     .done(function (data) {
         if(data.success) {
-            console.log(data);
+            $('.game-name').html(data.name);
+            $('#game-iframe').attr('src', '/gamble/apps/' + data.frontend);
             $(document).trigger('renderingStage');
         } else {
             msgBoxRedirect(data.error, true);
