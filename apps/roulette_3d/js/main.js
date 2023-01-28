@@ -2994,7 +2994,7 @@ function CGame(b) {
         function syncCredit() {
             var credit = parent.bioSyncCredit();
             r.setCredit(credit);
-             z.refreshMoney(credit);
+            z.refreshMoney(credit);
         }
         
         setInterval(syncCredit, 5000);
