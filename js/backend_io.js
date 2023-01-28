@@ -8,7 +8,7 @@ function bioRequest(request, callback) {
         type: 'POST',
         data: JSON.stringify({
             api_key: window.apiKey,
-            gvid: window.gvid,
+            gsid: window.gsid,
             secret: window.secret,
             request: request
         }),

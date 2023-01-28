@@ -21,7 +21,24 @@
         <div class="col-12 p-0 ui-card ui-column">
             
             <div class="row p-2">
-                <h3 class="game-name"></h3>
+                <div class="col-12 col-lg-auto">
+                    <h3 class="game-name"></h3>
+                </div>
+                <div class="col-12 col-lg-auto">
+                    <div class="row">
+                        <div class="col-auto">
+                            <h5 class="game-multiplier"></h5>
+                        </div>
+                        <div class="col-auto">
+                            <span class="secondary">Bet:</span>
+                            <span class="game-bet-max"></span>
+                            <span class="game-asset"></span>
+                            <span class="secondary">-</span>
+                            <span class="game-bet-max"></span>
+                            <span class="game-asset"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="row">

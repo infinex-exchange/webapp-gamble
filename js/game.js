@@ -62,6 +62,10 @@ $(document).on('authChecked', function() {
             
             $('.game-name').html(data.name);
             $('#game-container').addClass('ratio-' + data.aspect);
+            $('.game-asset').html(data.assetid);
+            $('.game-bet-min').html(data.bet_min);
+            $('.game-bet-max').html(data.bet_max);
+            $('.game-multiplier').html('x' + data.multiplier);
             $('#game-frame').attr('src', '/gamble/apps/' + data.frontend + '/');
             
             setInterval(backendPing, 30000);
