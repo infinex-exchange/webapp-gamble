@@ -37,6 +37,7 @@
         </div>
         </div>
         
+        <script src="/gamble/js/backend_io.js?<?php echo filemtime(__DIR__.'/js/backend_io.js'); ?>"></script>
         <script src="/gamble/js/game.js?<?php echo filemtime(__DIR__.'/js/game.js'); ?>"></script>
         
         <?php include('../../templates/modals.php'); ?>
