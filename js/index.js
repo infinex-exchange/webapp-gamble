@@ -63,7 +63,7 @@ $(document).ready(function() {
         .retry(config.retry)
         .done(function (data) {
             if(data.success) {
-                alert(data);
+                location.href = '/gamble/game?gsid=' + data.gsid + '&secret=' + data.secret;
             } else {
                 msgBox(data.error);
             }
