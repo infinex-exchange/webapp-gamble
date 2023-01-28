@@ -1,6 +1,14 @@
 function renderHistoryItem(data) {     
     var cTime = new Date(data.time * 1000).toLocaleString();
     
+    var profitClass = '';
+    var profitBn = new BigNumber(data.profit);
+    
+    if(profitBn.isGreaterThan(0))
+        profitClass = 'text-green';
+    else if(profitBn.isLessThan(0))
+        profitClass = 'text-red';
+    
     return `
         <div class="row p-2 hoverable">
             <div class="col-3 d-none d-lg-block">
@@ -22,7 +30,7 @@ function renderHistoryItem(data) {
             <div class="col-2 d-none d-lg-block text-end">
                 ${data.win} ${data.assetid}
             </div>
-            <div class="col-2 d-none d-lg-block text-end">
+            <div class="col-2 d-none d-lg-block text-end ${profitClass}">
                 ${data.profit} ${data.assetid}
             </div>
             <div class="col-2 d-lg-none">
@@ -35,7 +43,7 @@ function renderHistoryItem(data) {
                 <br>
                 ${data.game_name}
             </div>
-            <div class="col-4 d-lg-none text-end">
+            <div class="col-4 d-lg-none text-end ${profitClass}">
                 <strong>${data.profit} ${data.assetid}</strong>
             </div>
         </div>

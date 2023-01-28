@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <?php include('../../templates/head.php'); ?>
+        <?php include('../../imports/bignumber.html'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/gamble/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>History | Infinex Gamble</title>
