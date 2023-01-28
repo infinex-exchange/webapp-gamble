@@ -16,7 +16,7 @@ $(document).on('authChecked', function() {
     }
     
     $.ajax({
-        url: config.apiUrl + '/gamble/session',
+        url: config.apiUrl + '/gamble/session/bind',
         type: 'POST',
         data: JSON.stringify({
             api_key: window.apiKey,
