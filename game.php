@@ -22,12 +22,12 @@
             
             <div class="row p-2">
                 <div class="col-12 col-lg-auto my-auto">
-                    <h3 class="game-name p-0"></h3>
+                    <h3 class="game-name m-0"></h3>
                 </div>
                 <div class="col-12 col-lg-auto my-auto">
                     <div class="row">
                         <div class="col-auto my-auto">
-                            <h5 class="game-multiplier p-0"></h5>
+                            <h5 class="game-multiplier m-0"></h5>
                         </div>
                         <div class="col-auto my-auto">
                             <span class="secondary">Bet:</span>
