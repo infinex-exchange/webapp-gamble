@@ -4,5 +4,3 @@ RewriteEngine on
 
 RewriteRule ^game/?$ game.php [L]
 RewriteRule ^history/?$ history.php [L]
-
-RewriteRule ^apps/(.*)$ apps/$1 [L]
