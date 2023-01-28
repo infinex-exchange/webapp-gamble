@@ -25,14 +25,17 @@ function renderHistoryItem(data) {
             <div class="col-2 d-none d-lg-block text-end">
                 ${data.profit} ${data.assetid}
             </div>
-            <div class="col-6 d-lg-none">
+            <div class="col-2 d-lg-none">
+                <img src="${data.game_cover}" class="img-fluid">
+            </div>
+            <div class="col-6 d-lg-none my-auto">
                 <small class="secondary">
                     ${cTime}
                 </small>
                 <br>
-                ${data.name}
+                ${data.game_name}
             </div>
-            <div class="col-6 d-lg-none text-end">
+            <div class="col-4 d-lg-none text-end">
                 <strong>${data.profit} ${data.assetid}</strong>
             </div>
         </div>
