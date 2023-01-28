@@ -55,6 +55,7 @@ $(document).on('authChecked', function() {
     .done(function (data) {
         if(data.success) {
             $('.game-name').html(data.name);
+            $('#game-container').addClass('embed-responive-' + data.aspect);
             $('#game-frame').attr('src', '/gamble/apps/' + data.frontend + '/');
             
             setInterval(backendPing, 30000);
