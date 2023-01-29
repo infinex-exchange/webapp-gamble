@@ -2523,14 +2523,9 @@ function CGame(a) {
         this._onSitDown();
         d = !0;
         
-        function syncCredit() {
-            var credit = parseInt(parent.bioSyncCredit());
-            n.setCredit(credit);
-            w.setMoney(credit);
-        }
-        
-        setInterval(syncCredit, 5000);
-        syncCredit();
+        var initialCredit = parseInt(parent.bioSyncCredit());
+        n.setCredit(initialCredit);
+        w.setMoney(initialCredit);
     }
     
     this.unload = function() {

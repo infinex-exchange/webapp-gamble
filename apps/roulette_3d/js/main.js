@@ -2991,14 +2991,9 @@ function CGame(b) {
         this._onSitDown();
         f = !0;
         
-        function syncCredit() {
-            var credit = parseInt(parent.bioSyncCredit());
-            r.setCredit(credit);
-            z.refreshMoney(credit);
-        }
-        
-        setInterval(syncCredit, 5000);
-        syncCredit();
+        var initialCredit = parseInt(parent.bioSyncCredit());
+        r.setCredit(initialCredit);
+        z.refreshMoney(initialCredit);
     };
     this.unload = function() {
         stopSound("wheel_sound");

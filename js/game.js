@@ -16,10 +16,7 @@ function backendPing() {
     })
     .retry(config.retry)
     .done(function (data) {
-        if(data.success) {
-            window.credit = data.credit;
-        }
-        else {
+        if(!data.success) {
             msgBoxRedirect(data.error, true);
         }
     })
@@ -35,7 +32,6 @@ $(document).on('authChecked', function() {
     var urlParams = new URLSearchParams(window.location.search);
     window.gsid = urlParams.get('gsid');
     window.secret = urlParams.get('secret');
-    window.credit = 0;
     
     if(window.gsid == null || window.secret == null) {
         msgBoxRedirect('Session parameters not set');
