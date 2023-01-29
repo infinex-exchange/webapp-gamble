@@ -16,7 +16,7 @@
         
         <!-- Root container -->
         <div id="root" class="container-fluid container-1500 container-rest p-0 user-only">
-        <div class="row m-0 h-rest">
+        <div class="row m-0">
         
         <!-- Main column -->
         <div id="game" class="col-12 p-0 ui-card ui-column rest-of-height">
