@@ -19,7 +19,7 @@
         <div class="row m-0 h-rest">
         
         <!-- Main column -->
-        <div class="col-12 p-0 ui-card ui-column rest-of-height">
+        <div id="game" class="col-12 p-0 ui-card ui-column rest-of-height">
             
             <div id="game-header" class="row pb-3">
                 <div class="col-12 col-md-auto my-auto">
