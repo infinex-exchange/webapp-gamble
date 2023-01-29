@@ -2,7 +2,7 @@ function doJsSizing() {
     document.body.style.setProperty('--emulated-100vh', window.innerHeight + 'px');
     document.body.style.setProperty('--height-mobile-nav', $('#mobile-navbar').outerHeight() + 'px');
     document.body.style.setProperty('--height-module-nav', $('.navbar-gamble').first().outerHeight() + 'px');
-	document.body.style.setProperty('--height-main-nav', $('#main-navbar').outerHeight() + 'px');
+	document.body.style.setProperty('--height-main-nav', $('.navbar-master').first().outerHeight() + 'px');
     
     ['game'].forEach(function(i) {
         if($('#' + i).length == 0) return;
