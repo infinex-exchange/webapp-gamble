@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../templates/head.php'); ?>
-        <?php include('../../imports/bignumber.html'); ?>
+        <?php include('../../inc/head.php'); ?>
         <script src="/js/ajax_scroll.js?<?php echo filemtime(__DIR__.'/../../js/ajax_scroll.js'); ?>"></script>
         <link rel="stylesheet" href="/gamble/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>History | Infinex Gamble</title>
     </head>
     <body>
-    
-        <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
         <?php include(__DIR__.'/templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -57,7 +53,7 @@
         
         <script src="/gamble/js/history.js?<?php echo filemtime(__DIR__.'/js/history.js'); ?>"></script>
         
-        <?php include('../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../../inc/footer.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
     
     </body>

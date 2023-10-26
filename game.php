@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('../../templates/head.php'); ?>
+        <?php include('../../inc/head.php'); ?>
         <link rel="stylesheet" href="/gamble/css/styles.css?<?php echo filemtime(__DIR__.'/css/styles.css'); ?>">
         <title>Infinex Gamble</title>
     </head>
     <body>
-    
-        <!-- Preloader -->
-        <?php include('../../templates/preloader.html'); ?>
+        <?php include('../../inc/body.php'); ?>
         
         <!-- Navbar -->
-        <?php include('../../templates/navbar.php'); ?>
         <?php include(__DIR__.'/templates/navbar.php'); ?>
         
         <!-- Root container -->
@@ -57,7 +54,7 @@
         <script src="/gamble/js/backend_io.js?<?php echo filemtime(__DIR__.'/js/backend_io.js'); ?>"></script>
         <script src="/gamble/js/game.js?<?php echo filemtime(__DIR__.'/js/game.js'); ?>"></script>
         
-        <?php include('../../templates/modals.php'); ?>
+        <?php include(__DIR__.'/../../inc/footer.php'); ?>
         <?php include(__DIR__.'/templates/mobile_nav.php'); ?>
     
     </body>
